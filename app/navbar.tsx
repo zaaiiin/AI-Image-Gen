@@ -5,6 +5,13 @@ const Navbar = () => {
         <div className="text-white text-2xl flex items-center justify-center ">
           PixaNova
         </div>
+
+        <div className="navGroup">
+          <p className="text-white">Collection</p>
+          <p className="text-white">About Us</p>
+          <p className="text-white">Terms of Use</p>
+        </div>
+
         <button className="text-white rounded-full min-w-[10px]">
           Sign In
         </button>

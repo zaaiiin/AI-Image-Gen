@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navGroup {
+  display: flex;
+}
+
+.navGroup p {
+  margin: 0 20px;
+}
+
+.navGroup p:hover {
+  color: #4568dc;
+  cursor: pointer;
+  transition: 0.5s;
+}
