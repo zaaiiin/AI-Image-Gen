@@ -17,6 +17,9 @@ export default function Home() {
           <Image src={AI} alt="AI" id="ai-image" />
         </div>
       </div>
+      <div className="prompt text-black w-44 flex flex-col justify-start mx-auto bg-white mt-auto">
+        Enter a prompt
+      </div>
     </main>
   );
 }
