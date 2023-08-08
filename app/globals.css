@@ -11,7 +11,13 @@
 }
 
 .navGroup p:hover {
-  color: #4568dc;
+  color: #c33764;
   cursor: pointer;
   transition: 0.5s;
+}
+
+#ai-image {
+  height: 350px;
+  width: 350px;
+  z-index: 12;
 }
