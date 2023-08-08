@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&family=PT+Sans+Narrow:wght@400;700&family=Poppins:wght@500;600&display=swap");
+
 .navGroup {
   display: flex;
 }
@@ -17,7 +19,9 @@
 }
 
 #ai-image {
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: 400px;
   z-index: 12;
+  position: fixed;
+  top: 240px;
 }

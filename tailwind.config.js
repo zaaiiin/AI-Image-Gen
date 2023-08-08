@@ -16,6 +16,13 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        "pt-sans-narrow": ["PT Sans Narrow", "sans-serif"],
+      },
+      fontWeight: {
+        400: 400,
+        700: 700,
+      },
       colors: {
         primary1: "#c33764 ",
         primary2: "#7b4397  ",

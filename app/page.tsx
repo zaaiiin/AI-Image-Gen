@@ -7,13 +7,10 @@ export default function Home() {
     <main className=" bg-black min-h-screen flex flex-col">
       <Navbar />
       <div className="container mx-auto pt-36">
-        <div className="hero text-7xl text-white w-full flex justify-center">
-          <p className="text-center leading-none">
+        <div className="hero text-7xl text-white w-full flex justify-center uppercase tracking-widest font-archivo-narrow font-bold leading-6">
+          <p className="text-center leading-none ">
             Generate <br></br>
-            Stunning Visuals{" "}
-            {/* <span className="bg-gradient-to-r from-primary1 to-primary2 text-transparent bg-clip-text">
-              AI
-            </span> */}
+            Stunning Visuals
           </p>
         </div>
         <div className="ai-container flex justify-center my-auto">
