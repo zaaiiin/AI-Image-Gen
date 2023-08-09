@@ -12,6 +12,7 @@
   margin: 0 20px;
 }
 
+.sign-in:hover,
 .navGroup p:hover {
   color: #c33764;
   cursor: pointer;
@@ -23,5 +24,14 @@
   width: 400px;
   z-index: 12;
   position: fixed;
-  top: 240px;
+  top: 280px;
+}
+
+#search-btn {
+  padding: 8px;
+  height: 39px;
+  width: 39px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #c3376383;
 }

@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      letterSpacing: {
+        widest: ".15em",
+      },
       fontFamily: {
         "pt-sans-narrow": ["PT Sans Narrow", "sans-serif"],
       },

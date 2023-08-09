@@ -12,9 +12,7 @@ const Navbar = () => {
           <p className="text-white">Terms of Use</p>
         </div>
 
-        <button className="text-white rounded-full min-w-[10px]">
-          Sign In
-        </button>
+        <button className="sign-in text-white min-w-[10px]">Sign In</button>
       </nav>
     </header>
   );
