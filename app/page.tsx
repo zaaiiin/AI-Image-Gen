@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Navbar from "./navbar";
+import ImageGenerator from "./imageGen";
 import AI from "../ai-image.png";
-import searchbtn from "../search-btn.png";
-import { Textarea } from "@/components/ui/textarea";
+// import searchbtn from "../search-btn.png";
+// import { Textarea } from "@/components/ui/textarea";
 
 export default function Home() {
   return (
@@ -19,9 +20,10 @@ export default function Home() {
           <Image src={AI} alt="AI" id="ai-image" />
         </div>
         <div className="bg-transparent h-20 flex items-center absolute bottom-20 justify-center w-full left-0">
-          <Textarea />
-          <Image src={searchbtn} alt="search" id="search-btn" />
+          {/* <Textarea />
+          <Image src={searchbtn} alt="search" id="search-btn" /> */}
         </div>
+        <ImageGenerator />
       </div>
     </main>
   );
