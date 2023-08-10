@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Api from "../components/api";
-import { Textarea } from "@/components/ui/textarea";
+// import { Textarea } from "@/components/ui/textarea";
 import searchbtn from "../search-btn.png";
 
 const ImageGenerator = () => {
@@ -34,10 +34,10 @@ const ImageGenerator = () => {
   };
 
   return (
-    <div className="bg-transparent h-20 flex items-center absolute bottom-20 justify-center w-full left-0">
+    <div className="bg-transparent h-20 flex items-center bottom-20 justify-center w-full left-0 ">
       {/* <Textarea /> */}
       <div className="flex flex-col font-poppins font-medium items-center justify-center"></div>{" "}
-      <div className="flex py-20 items-center justify-center">
+      <div className="flex py-20 items-center justify-center absolute top-3/4">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -52,13 +52,15 @@ const ImageGenerator = () => {
           <Image src={searchbtn} alt="search" id="search-btn" />
         </button>
       </div>
-      <div className="image-container">
-        {image && <img src={image} alt="Generated-pic" />}
+      <div className="image-container z-20 h-512 w-512 flex">
+        {image && (
+          <img src={image} alt="Generated-pic" className="image rounded-md  " />
+        )}
       </div>
       <div className="loading-container">
         {isLoading && (
           <div>
-            <p className="loading-text text-white ">Generating image...</p>
+            <p className="loading-text text-white  ">Generating image...</p>
           </div>
         )}
       </div>
