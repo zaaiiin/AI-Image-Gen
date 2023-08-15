@@ -4,11 +4,18 @@ import React, { useState } from "react";
 import Api from "../components/api";
 // import { Textarea } from "@/components/ui/textarea";
 import searchbtn from "../search-btn.png";
+import { after } from "node:test";
 
-const ImageGenerator = () => {
+interface ImageGeneratorProps {
+  title: string;
+  aiImage: JSX.Element;
+}
+
+const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isAiImageHidden, setIsAiImageHidden] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,10 +38,28 @@ const ImageGenerator = () => {
     } catch (error) {
       setIsLoading(false);
     }
+    afterImage();
+  };
+
+  const afterImage = () => {
+    setIsLoading(false);
+
+    const titleElement = document.querySelector(props.title);
+    if (titleElement) {
+      titleElement.classList.add("title-animation");
+    }
+    setIsAiImageHidden(true);
   };
 
   return (
     <div className="bg-transparent h-20 flex items-center bottom-20 justify-center w-full left-0 ">
+      //the className prop from the aiImage element is extracted and the hidden
+      class is added based on state
+      {React.cloneElement(props.aiImage, {
+        className: `${props.aiImage.props.className} ${
+          isAiImageHidden ? "hidden" : ""
+        }`,
+      })}
       {/* <Textarea /> */}
       <div className="flex flex-col font-poppins font-medium items-center justify-center"></div>{" "}
       <div className="flex py-20 items-center justify-center absolute top-3/4">
@@ -52,15 +77,15 @@ const ImageGenerator = () => {
           <Image src={searchbtn} alt="search" id="search-btn" />
         </button>
       </div>
-      <div className="image-container z-20 h-512 w-512 flex">
+      <div className="image-container z-20 h-512 w-512 flex absolute top-1/4">
         {image && (
           <img src={image} alt="Generated-pic" className="image rounded-md  " />
         )}
       </div>
-      <div className="loading-container">
+      <div className="loading-container flex absolute top-1/2">
         {isLoading && (
           <div>
-            <p className="loading-text text-white  ">Generating image...</p>
+            <p className="loading-text text-white ">Generating image...</p>
           </div>
         )}
       </div>

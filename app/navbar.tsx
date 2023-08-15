@@ -7,7 +7,7 @@ const Navbar = () => {
         </div>
 
         <div className="navGroup">
-          <p className="text-white">Collection</p>
+          <p className="text-white">How it Works</p>
           <p className="text-white">About Us</p>
           <p className="text-white">Terms of Use</p>
         </div>

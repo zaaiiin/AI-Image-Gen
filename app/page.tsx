@@ -7,11 +7,11 @@ import AI from "../ai-image.png";
 
 export default function Home() {
   return (
-    <main className=" bg-black min-h-screen flex flex-col elative">
+    <main className=" bg-black min-h-screen flex flex-col relative">
       <Navbar />
       <div className="container mx-auto pt-40 ">
         <div className="hero text-7xl text-white w-full flex justify-center uppercase tracking-widest font-archivo-narrow font-bold leading-6">
-          <p className="text-center leading-none transform scale-y-150">
+          <p className="title text-center leading-none transform scale-y-150">
             Generate <br></br>
             Stunning Visuals
           </p>
@@ -23,7 +23,10 @@ export default function Home() {
           {/* <Textarea />
           <Image src={searchbtn} alt="search" id="search-btn" /> */}
         </div>
-        <ImageGenerator />
+        <ImageGenerator
+          title=".title"
+          aiImage={<Image src={AI} alt="AI" id="ai-image" />}
+        />
       </div>
     </main>
   );
