@@ -43,6 +43,9 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
 
   const afterImage = () => {
     setIsLoading(false);
+    const promptContainer: JSX.IntrinsicElements["div"] =
+      document.querySelector(".prompt-container");
+    promptContainer.classList.add("prompt-container_animation");
 
     const titleElement = document.querySelector(props.title);
     if (titleElement) {
@@ -62,7 +65,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
       })}
       {/* <Textarea /> */}
       <div className="flex flex-col font-poppins font-medium items-center justify-center"></div>{" "}
-      <div className="flex py-20 items-center justify-center absolute top-3/4">
+      <div className="prompt-container flex py-20 items-center justify-center absolute top-3/4">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
