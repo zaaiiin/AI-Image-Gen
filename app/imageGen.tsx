@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Api from "../components/api";
-// import { Textarea } from "@/components/ui/textarea";
 import searchbtn from "../search-btn.png";
 import { after } from "node:test";
 
@@ -20,6 +19,9 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setIsAiImageHidden(true);
+    afterImage();
+
     try {
       const res = await fetch(
         "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5",
@@ -38,7 +40,6 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
     } catch (error) {
       setIsLoading(false);
     }
-    afterImage();
   };
 
   const afterImage = () => {
@@ -51,7 +52,6 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
     if (titleElement) {
       titleElement.classList.add("title-animation");
     }
-    setIsAiImageHidden(true);
   };
 
   return (
@@ -63,7 +63,6 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
           isAiImageHidden ? "hidden" : ""
         }`,
       })}
-      {/* <Textarea /> */}
       <div className="flex flex-col font-poppins font-medium items-center justify-center"></div>{" "}
       <div className="prompt-container flex py-20 items-center justify-center absolute top-3/4">
         <form onSubmit={handleSubmit}>
