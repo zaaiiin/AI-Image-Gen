@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Api from "../components/api";
 import searchbtn from "../search-btn.png";
-import { after } from "node:test";
 import { Skeleton } from "../components/ui/skeleton";
 
 interface ImageGeneratorProps {
@@ -15,11 +14,9 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // const [isAiImageHidden, setIsAiImageHidden] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setIsAiImageHidden(true);
     onSubmitAnimation();
 
     try {
@@ -62,11 +59,6 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
 
   return (
     <div className="bg-transparent h-20 flex items-center bottom-20 justify-center w-full left-0 ">
-      {/* {React.cloneElement(props.aiImage, {
-        className: `${props.aiImage.props.className} ${
-          isAiImageHidden ? "hidden" : ""
-        }`,
-      })} */}
       <div className="flex flex-col font-poppins font-medium items-center justify-center"></div>{" "}
       <div className="prompt-container flex py-20 items-center justify-center absolute top-3/4">
         <form onSubmit={handleSubmit}>
