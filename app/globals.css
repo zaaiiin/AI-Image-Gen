@@ -19,7 +19,7 @@
   transition: 0.5s;
 }
 
-#ai-image {
+.ai-image {
   height: 400px;
   width: 400px;
   z-index: 12;

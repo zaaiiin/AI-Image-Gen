@@ -4,23 +4,23 @@ import React, { useState } from "react";
 import Api from "../components/api";
 import searchbtn from "../search-btn.png";
 import { after } from "node:test";
+import { Skeleton } from "../components/ui/skeleton";
 
 interface ImageGeneratorProps {
   title: string;
-  aiImage: JSX.Element;
+  aiImage: string;
 }
 
 const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [isAiImageHidden, setIsAiImageHidden] = useState(false);
+  // const [isAiImageHidden, setIsAiImageHidden] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
-    setIsAiImageHidden(true);
-    afterImage();
+    // setIsAiImageHidden(true);
+    onSubmitAnimation();
 
     try {
       const res = await fetch(
@@ -42,8 +42,9 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
     }
   };
 
-  const afterImage = () => {
-    setIsLoading(false);
+  const onSubmitAnimation = () => {
+    setIsLoading(true);
+    // setIsAiImageHidden(true);
     const promptContainer: JSX.IntrinsicElements["div"] =
       document.querySelector(".prompt-container");
     promptContainer.classList.add("prompt-container_animation");
@@ -52,17 +53,20 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
     if (titleElement) {
       titleElement.classList.add("title-animation");
     }
+
+    const aiImage = document.querySelector(props.aiImage);
+    if (aiImage) {
+      aiImage.classList.add("hidden");
+    }
   };
 
   return (
     <div className="bg-transparent h-20 flex items-center bottom-20 justify-center w-full left-0 ">
-      //the className prop from the aiImage element is extracted and the hidden
-      class is added based on state
-      {React.cloneElement(props.aiImage, {
+      {/* {React.cloneElement(props.aiImage, {
         className: `${props.aiImage.props.className} ${
           isAiImageHidden ? "hidden" : ""
         }`,
-      })}
+      })} */}
       <div className="flex flex-col font-poppins font-medium items-center justify-center"></div>{" "}
       <div className="prompt-container flex py-20 items-center justify-center absolute top-3/4">
         <form onSubmit={handleSubmit}>
@@ -79,15 +83,16 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
           <Image src={searchbtn} alt="search" id="search-btn" />
         </button>
       </div>
-      <div className="image-container z-20 h-512 w-512 flex absolute top-1/4">
+      <div className="image-container z-20 h-512 w-512 flex absolute top-1/4 border-zinc-800 border-2 border-opacity-50 rounded-md">
         {image && (
-          <img src={image} alt="Generated-pic" className="image rounded-md  " />
+          <img src={image} alt="Generated-pic" className="image rounded-md" />
         )}
       </div>
-      <div className="loading-container flex absolute top-1/2">
+      <div className="loading-container flex absolute top-1/4 z-50">
         {isLoading && (
           <div>
-            <p className="loading-text text-white ">Generating image...</p>
+            <Skeleton className="w-[512px] h-[514px]  flex justify-center my-auto" />
+            <div className="loading-text flex text-white">Generating...</div>
           </div>
         )}
       </div>

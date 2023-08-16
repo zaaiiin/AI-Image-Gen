@@ -17,7 +17,7 @@ export default function Home() {
           </p>
         </div>
         <div className="ai-container flex justify-center my-auto">
-          <Image src={AI} alt="AI" id="ai-image" />
+          <Image src={AI} alt="AI" id="ai-image1" className="ai-image" />
         </div>
         <div className="bg-transparent h-20 flex items-center absolute bottom-20 justify-center w-full left-0">
           {/* <Textarea />
@@ -25,7 +25,10 @@ export default function Home() {
         </div>
         <ImageGenerator
           title=".title"
-          aiImage={<Image src={AI} alt="AI" id="ai-image" />}
+          // aiImage={
+          //   <Image src={AI} alt="AI" id="ai-image1" className="ai-image" />
+          // }
+          aiImage=".ai-container"
         />
       </div>
     </main>
