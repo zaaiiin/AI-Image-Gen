@@ -4,6 +4,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&family=PT+Sans+Narrow:wght@400;700&family=Poppins:wght@500;600&display=swap");
 
+* {
+  border: 1px solid green;
+}
+
 .navGroup {
   display: flex;
 }
