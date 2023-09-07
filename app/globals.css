@@ -23,14 +23,6 @@
   transition: 0.5s;
 }
 
-.ai-image {
-  height: 400px;
-  width: 400px;
-  z-index: 12;
-  position: fixed;
-  top: 280px;
-}
-
 #search-btn {
   padding: 8px;
   height: 39px;
@@ -70,3 +62,12 @@
   margin-top: 10px;
   padding-bottom: 0px;
 }
+
+.image-container {
+  height: 212px;
+  width: 212px;
+}
+
+/* .ai-container {
+  width: 212px;
+} */
