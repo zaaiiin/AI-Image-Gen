@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import Api from "../components/api";
+import apiKey from "../components/apiKey";
 import searchbtn from "../search-btn.png";
 import { Skeleton } from "../components/ui/skeleton";
-import { Progress } from "@/components/ui/progress";
+// import { Progress } from "@/components/ui/progress";
 
 interface ImageGeneratorProps {
   title: string;
@@ -38,7 +38,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
           method: "POST",
           headers: {
             "content-type": "application/json",
-            Authorization: `Bearer ${Api}`,
+            Authorization: `Bearer ${apiKey}`,
           },
           body: JSON.stringify({ inputs: input }),
         }

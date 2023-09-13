@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "./navbar";
 import ImageGenerator from "./imageGen";
 import AI from "../ai-image.png";
+
 // import searchbtn from "../search-btn.png";
 // import { Textarea } from "@/components/ui/textarea";
 
