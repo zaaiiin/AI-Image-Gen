@@ -19,11 +19,11 @@ const Header = () => {
       </nav>
 
       <button
-        className="menu absolute right-10 pt-2 z-120 "
+        className="menu absolute right-10 pt-2 z-120"
         onClick={() => setToggle(!toggle)}
       >
         <Image
-          src="/menu.png"
+          src="/menu-icon.png"
           className="menu-icon "
           alt="menu-icon"
           height={10}
@@ -32,17 +32,17 @@ const Header = () => {
       </button>
 
       {toggle && (
-        <ul className="menu-group z-100 text-black right-0 t-0 b-0 mx-auto my-auto px-auto bg-white h-screen w-screen text-sm items-center  rounded-sm font-700 py-10">
-          <li className="menu-group_item  border-stone-700 pt-2">
+        <ul className="menu-group text-black flex flex-col absolute top-0 left-0 b-0 mt-0 mb-0 bg-white h-screen w-screen text-sm items-left rounded-sm font-700 px-3 z-100">
+          <li className="menu-group_item  border-stone-700 py-8 pt-6 pl-2">
             How it works
           </li>
-          <li className="menu-group_item border-t border-stone-700">
+          <li className="menu-group_item border-t border-stone-700 py-8 pl-2">
             About us
           </li>
-          <li className="menu-group_item border-t border-stone-700">
+          <li className="menu-group_item border-t border-stone-700 py-8 pl-2">
             Terms of service
           </li>
-          <li className="menu-group_item border-t  border-stone-700 pb-2">
+          <li className="menu-group_item border-t  border-stone-700 pb-2 py-8 pl-2">
             Sign In
           </li>
         </ul>
