@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "../components/ui/header";
-import ImageGenerator from "../components/services/imageGen";
+import ImageGenerator from "./services/imageGen";
 // import AI from "../ai-image.png";
 
 // import searchbtn from "../search-btn.png";
