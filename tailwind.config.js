@@ -22,8 +22,18 @@ module.exports = {
       },
     },
     extend: {
+      inset: {
+        151: "151px",
+        148: "148px",
+      },
       spacing: {
-        86: "86px",
+        85: "85px",
+      },
+      margin: {
+        88: "88px",
+      },
+      sizing: {
+        30: "30px",
       },
       height: {
         212: "212px",
