@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      height: {
+        212: "212px",
+      },
       letterSpacing: {
         widest: ".15em",
       },
