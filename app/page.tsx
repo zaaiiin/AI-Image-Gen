@@ -18,12 +18,12 @@ function Page() {
           Stunning Visuals
         </p>
       </div>
-      <div className="ai-container flex flex-col w-60 justify-center items-center my-88 mx-auto z-20">
+      <div className="ai-container flex flex-col w-300 justify-center items-center my-88 md:my-110 mx-auto z-20">
         <Image
           src="/ai-image.png"
           alt="AI"
           id="ai-image1"
-          className="ai-image"
+          className="ai-image md:w-300 md:h-300"
           width={212}
           height={212}
         />

@@ -85,7 +85,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
         {isLoading && (
           <div>
             <Skeleton className=" w-[212px] h-[214px]  flex justify-center my-auto" />
-            <div className="loading-indicator flex  justify-end font-pt-sans-narrow text-white tracking-widest uppercase scale-y-150 font-bold text-lg mt-2 "></div>
+            <div className="loading-indicator flex  justify-end font-pt-sans-narrow text-white tracking-widest uppercase scale-y-150 font-bold text-lg mt-2"></div>
           </div>
         )}
       </div>

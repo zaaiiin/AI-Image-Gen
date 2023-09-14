@@ -35,12 +35,20 @@ module.exports = {
       },
       margin: {
         88: "88px",
+        110: "110px",
       },
       sizing: {
         30: "30px",
       },
       height: {
         212: "212px",
+        500: "500px",
+        300: "300px",
+      },
+      width: {
+        400: "400px",
+        500: "500px",
+        300: "300px",
       },
       letterSpacing: {
         widest: ".15em",
