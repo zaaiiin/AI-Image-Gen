@@ -18,7 +18,7 @@ export default function Home() {
           Stunning Visuals
         </p>
       </div>
-      <div className="ai-container flex flex-col w-60 justify-center items-center my-20 mx-auto z-20">
+      <div className="ai-container flex flex-col w-60 justify-center items-center my-86 mx-auto z-20">
         <Image
           src="/ai-image.png"
           alt="AI"
