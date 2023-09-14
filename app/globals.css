@@ -17,7 +17,7 @@
 }
 
 .sign-in:hover,
-.navGroup p:hover {
+.navGroup div:hover {
   color: #c33764;
   cursor: pointer;
   transition: 0.5s;
@@ -71,3 +71,16 @@
 /* .ai-container {
   width: 212px;
 } */
+
+.menu-group_item {
+  border-color: #5a5a5a;
+  border-width: 1px;
+  border-style: solid;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}

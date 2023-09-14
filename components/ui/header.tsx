@@ -12,7 +12,7 @@ const Header = () => {
       <div className="logo absolute left-10 text-lg flex items-center justify-center bg-gradient-to-r from-primary1 to-primary2 text-transparent bg-clip-text font-bold">
         PixaNova
       </div>
-      <nav className="navGroup invisible md:visible text-white text-sm items-center absolute px-0 h-10 right-1/4 left-1/4 flex  text-center justify-center gap-5">
+      <nav className="navGroup invisible md:visible text-white text-sm items-center absolute px-0 h-10 right-1/4 left-1/4 flex text-center justify-center gap-5">
         <div className="how ">How it Works</div>
         <div className="about">About Us</div>
         <div className="terms">Terms of Use</div>
@@ -33,18 +33,10 @@ const Header = () => {
 
       {toggle && (
         <ul className="menu-group text-black flex flex-col absolute top-0 left-0 b-0 mt-0 mb-0 bg-white h-screen w-screen text-sm items-left rounded-sm font-700 px-3 z-100">
-          <li className="menu-group_item  border-stone-700 py-8 pt-6 pl-2">
-            How it works
-          </li>
-          <li className="menu-group_item border-t border-stone-700 py-8 pl-2">
-            About us
-          </li>
-          <li className="menu-group_item border-t border-stone-700 py-8 pl-2">
-            Terms of service
-          </li>
-          <li className="menu-group_item border-t  border-stone-700 pb-2 py-8 pl-2">
-            Sign In
-          </li>
+          <li className="menu-group_item pt-6">How it works</li>
+          <li className="menu-group_item border-t">About us</li>
+          <li className="menu-group_item border-t">Terms of service</li>
+          <li className="menu-group_item border-t pb-2">Sign In</li>
         </ul>
       )}
 
