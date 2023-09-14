@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Header from "../components/ui/header";
+import Footer from "../components/ui/footer";
 import ImageGenerator from "./services/imageGen";
 // import AI from "../ai-image.png";
 
@@ -29,6 +30,7 @@ export default function Home() {
 
         <ImageGenerator title=".title" aiImage=".ai-container" />
       </div>
+      <Footer></Footer>
     </main>
   );
 }
