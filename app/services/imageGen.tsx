@@ -2,25 +2,11 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import apiKey from "../../components/apiKey";
-// import searchbtn from ".../search-btn.png";
 import { Skeleton } from "../../components/ui/skeleton";
-// import { Progress } from "@/components/ui/progress";
 
 interface ImageGeneratorProps {
   title: string;
-  aiImage: string;
 }
-
-// function ProgressDemo() {
-//   const [progress, setProgress] = useState(13);
-
-//   useEffect(() => {
-//     const timer = setTimeout(() => setProgress(66), 500);
-//     return () => clearTimeout(timer);
-//   }, []);
-
-//   return <Progress value={progress} className="loading indicator" />;
-// }
 
 const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
@@ -45,6 +31,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
       );
       const blob = await res.blob();
       setImage(URL.createObjectURL(blob));
+
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
@@ -62,18 +49,14 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
     if (titleElement) {
       titleElement.classList.add("title-animation");
     }
-
-    // const aiImage = document.querySelector(props.aiImage);
-    // if (aiImage) {
-    //   aiImage.classList.add("hidden");
-    // }
   };
 
   return (
-    <div className="section flex flex-col w-full">
-      <div className="prompt-container flex  items-center justify-center w-full">
+    <div className="section flex flex-col w-full place-items-center">
+      <div className="prompt-container flex mt-14 items-center justify-center w-max">
         <form onSubmit={handleSubmit}>
           <input
+            className="form w-52"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -87,18 +70,18 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
             src="/search-btn.png"
             alt="search"
             id="search-btn"
-            width="80"
-            height="10"
+            width={40}
+            height={20}
           />
         </button>
       </div>
 
-      <div className="image-container flex justify-center z-20 border-2 border-opacity-50 rounded-md ">
+      <div className="image-container  justify-center z-20  rounded-md absolute top-151">
         {image && (
           <img src={image} alt="Generated-pic" className="image rounded-md " />
         )}
       </div>
-      <div className="loading-container flex absolute top-1/4 z-50">
+      <div className="loading-container flex absolute top-151 z-50">
         {isLoading && (
           <div>
             <Skeleton className=" w-[212px] h-[214px]  flex justify-center my-auto" />
