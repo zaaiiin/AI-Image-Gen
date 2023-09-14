@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import apiKey from "../components/apiKey";
-import searchbtn from "../search-btn.png";
-import { Skeleton } from "../components/ui/skeleton";
+import apiKey from "../apiKey";
+// import searchbtn from ".../search-btn.png";
+import { Skeleton } from "../ui/skeleton";
 // import { Progress } from "@/components/ui/progress";
 
 interface ImageGeneratorProps {
@@ -83,7 +83,13 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
         </form>
 
         <button type="submit" onClick={handleSubmit}>
-          <Image src={searchbtn} alt="search" id="search-btn" />
+          <Image
+            src="/search-btn.png"
+            alt="search"
+            id="search-btn"
+            width="80"
+            height="10"
+          />
         </button>
       </div>
 
