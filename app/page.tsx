@@ -7,7 +7,7 @@ import ImageGenerator from "./services/imageGen";
 // import searchbtn from "../search-btn.png";
 // import { Textarea } from "@/components/ui/textarea";
 
-export default function Home() {
+function Page() {
   return (
     <main className=" bg-black min-h-screen flex flex-col">
       <Header />
@@ -18,19 +18,20 @@ export default function Home() {
           Stunning Visuals
         </p>
       </div>
-      <div className="ai-container flex flex-col w-60 justify-center items-center my-86 mx-auto z-20">
+      <div className="ai-container flex flex-col w-60 justify-center items-center my-88 mx-auto z-20">
         <Image
           src="/ai-image.png"
           alt="AI"
           id="ai-image1"
           className="ai-image"
-          width="212"
-          height="212"
+          width={212}
+          height={212}
         />
 
-        <ImageGenerator title=".title" aiImage=".ai-container" />
+        <ImageGenerator title=".title" />
       </div>
       <Footer></Footer>
     </main>
   );
 }
+export default Page;
