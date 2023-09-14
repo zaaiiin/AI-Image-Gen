@@ -4,9 +4,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&family=PT+Sans+Narrow:wght@400;700&family=Poppins:wght@500;600&display=swap");
 
-* {
+/* * {
   border: 1px solid green;
-}
+} */
 
 .navGroup {
   display: flex;
@@ -46,20 +46,20 @@
 }
 
 .title-animation {
-  font-stretch: 20px;
-  font-size: 28px;
-  transform: translateY(-100%) scaleY(1.5);
-  transition: font-size 1s ease-in-out, transform 1s ease-in-out;
+  /* font-stretch: 20px; */
+  font-size: 20px;
+  transform: translateY(-50%) scaleY(1.5);
+  transition: font-size 2s ease-in-out, transform 0.5s ease-in-out;
   line-height: 1.1em;
-  letter-spacing: 0.35rem;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  /* letter-spacing: 0.35rem; */
+  /* margin-top: 15px; */
+  /* margin-bottom: 10px;  */
 }
 
 .prompt-container_animation {
   transform: translateY(20%);
   transition: transform 1s ease-in-out;
-  margin-top: 10px;
+
   padding-bottom: 0px;
 }
 

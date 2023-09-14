@@ -22,6 +22,10 @@ module.exports = {
       },
     },
     extend: {
+      zIndex: {
+        100: "100",
+        120: "120",
+      },
       inset: {
         151: "151px",
         148: "148px",
