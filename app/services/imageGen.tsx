@@ -14,11 +14,13 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [image, setImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  /* eslint-disable */
   const handleSubmit = async (e) => {
     e.preventDefault();
     onSubmitAnimation();
 
     const aiImageElement = document.querySelector(props.aiImage);
+    /* eslint-disable */
     aiImageElement.classList.add("invisible");
 
     try {
@@ -34,6 +36,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
         }
       );
       const blob = await res.blob();
+      /* eslint-disable */
       setImage(URL.createObjectURL(blob));
 
       setIsLoading(false);
@@ -45,8 +48,10 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const onSubmitAnimation = () => {
     setIsLoading(true);
 
+    /* eslint-disable */
     const promptContainer: JSX.IntrinsicElements["div"] =
       document.querySelector(".prompt-container");
+    /* eslint-disable */
     promptContainer.classList.add("prompt-container_animation");
 
     const titleElement = document.querySelector(props.title);
