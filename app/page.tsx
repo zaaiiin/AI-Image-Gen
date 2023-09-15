@@ -2,10 +2,6 @@ import Image from "next/image";
 import Header from "../components/ui/header";
 import Footer from "../components/ui/footer";
 import ImageGenerator from "./services/imageGen";
-// import AI from "../ai-image.png";
-
-// import searchbtn from "../search-btn.png";
-// import { Textarea } from "@/components/ui/textarea";
 
 function Page() {
   return (
