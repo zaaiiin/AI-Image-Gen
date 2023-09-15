@@ -6,6 +6,7 @@ import { Skeleton } from "../../components/ui/skeleton";
 
 interface ImageGeneratorProps {
   title: string;
+  aiImage: string;
 }
 
 const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
@@ -16,6 +17,9 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     onSubmitAnimation();
+
+    const aiImageElement = document.querySelector(props.aiImage);
+    aiImageElement.classList.add("invisible");
 
     try {
       const res = await fetch(

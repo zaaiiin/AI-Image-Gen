@@ -28,7 +28,7 @@ function Page() {
           height={212}
         />
 
-        <ImageGenerator title=".title" />
+        <ImageGenerator title=".title" aiImage=".ai-image" />
       </div>
       <Footer></Footer>
     </main>
