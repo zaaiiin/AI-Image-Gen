@@ -1,17 +1,18 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
 
-  console.log(toggle);
-
   return (
     <header className="w-screen  mt-5 h-10 flex justify-between items-center sm:px-16 font-pt-sans-narrow relative">
-      <div className="logo absolute left-10 text-lg flex items-center justify-center bg-gradient-to-r from-primary1 to-primary2 text-transparent bg-clip-text font-bold">
-        PixaNova
-      </div>
+      <Link href="/">
+        <div className="logo absolute left-10 text-lg flex items-center justify-center bg-gradient-to-r from-primary1 to-primary2 text-transparent bg-clip-text font-bold">
+          PixaNova
+        </div>
+      </Link>
       <nav className="navGroup invisible md:visible text-white text-sm items-center absolute px-0 h-10 right-1/4 left-1/4 flex text-center justify-center gap-5">
         <div className="how ">How it Works</div>
         <div className="about">About Us</div>
