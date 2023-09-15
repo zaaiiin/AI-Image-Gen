@@ -8,7 +8,7 @@ const Header = () => {
   console.log(toggle);
 
   return (
-    <header className="max-w-[2440px]  mt-5 h-10 flex justify-between items-center sm:px-16 font-pt-sans-narrow relative">
+    <header className="w-screen  mt-5 h-10 flex justify-between items-center sm:px-16 font-pt-sans-narrow relative">
       <div className="logo absolute left-10 text-lg flex items-center justify-center bg-gradient-to-r from-primary1 to-primary2 text-transparent bg-clip-text font-bold">
         PixaNova
       </div>

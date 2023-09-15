@@ -49,9 +49,9 @@
   /* font-stretch: 20px; */
   font-size: 20px;
   transform: translateY(-50%) scaleY(1.5);
-  transition: font-size 2s ease-in-out, transform 0.5s ease-in-out;
+  transition: font-size 1s ease-in-out, transform 0.5s ease-in-out;
   line-height: 1.1em;
-  /* letter-spacing: 0.35rem; */
+  letter-spacing: 0.35rem;
   /* margin-top: 15px; */
   /* margin-bottom: 10px;  */
 }

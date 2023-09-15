@@ -12,7 +12,7 @@ module.exports = {
       sm: "375px",
       md: "768px",
       lg: "1024px",
-      xl: "1400px",
+      xl: "1440px",
     },
     container: {
       center: true,
@@ -36,19 +36,24 @@ module.exports = {
       margin: {
         88: "88px",
         110: "110px",
+        160: "160px",
+        190: "190px",
       },
       sizing: {
         30: "30px",
       },
       height: {
         212: "212px",
-        500: "500px",
         300: "300px",
-      },
-      width: {
         400: "400px",
         500: "500px",
+        600: "600px",
+      },
+      width: {
         300: "300px",
+        400: "400px",
+        500: "500px",
+        600: "600px",
       },
       letterSpacing: {
         widest: ".15em",

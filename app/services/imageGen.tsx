@@ -53,7 +53,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
 
   return (
     <div className="section flex flex-col w-full place-items-center">
-      <div className="prompt-container flex mt-14 items-center justify-center w-max">
+      <div className="prompt-container flex mt-14 items-center justify-center w-max z-100">
         <form onSubmit={handleSubmit}>
           <input
             className="form w-52"
@@ -76,15 +76,15 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
         </button>
       </div>
 
-      <div className="image-container  justify-center z-20  rounded-md absolute top-151">
+      <div className="image-container  justify-center z-20  rounded-md absolute top-151 md:w-300 md:h-300 lg:h-400 lg:w-400 xl:h-500 xl:w-500">
         {image && (
           <img src={image} alt="Generated-pic" className="image rounded-md " />
         )}
       </div>
-      <div className="loading-container flex absolute top-151 z-50">
+      <div className="loading-container flex absolute top-151 z-50 md:w-300 md:h-300 lg:h-400 lg:w-400 xl:h-500 xl:w-500">
         {isLoading && (
           <div>
-            <Skeleton className=" w-[212px] h-[214px]  flex justify-center my-auto" />
+            <Skeleton className=" w-[212px] h-[214px] md:w-300 md:h-300 lg:w-400 lg:h-400 xl:h-500 xl:w-500 flex justify-center" />
             <div className="loading-indicator flex  justify-end font-pt-sans-narrow text-white tracking-widest uppercase scale-y-150 font-bold text-lg mt-2"></div>
           </div>
         )}
