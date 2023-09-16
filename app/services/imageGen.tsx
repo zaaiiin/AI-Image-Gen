@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { SyntheticEvent, useState } from "react";
 import apiKey from "../../components/apiKey";
 import { Skeleton } from "../../components/ui/skeleton";
-import { SyntheticEvent } from "react";
 
 interface ImageGeneratorProps {
   title: string;
