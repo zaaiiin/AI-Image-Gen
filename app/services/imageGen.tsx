@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import apiKey from "../../components/apiKey";
 import { Skeleton } from "../../components/ui/skeleton";
+import { FormEvent } from "react";
 
 interface ImageGeneratorProps {
   title: string;
@@ -11,17 +12,13 @@ interface ImageGeneratorProps {
 
 const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  /* eslint-disable */
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSubmitAnimation();
-
-    const aiImageElement = document.querySelector(props.aiImage);
-    /* eslint-disable */
-    aiImageElement.classList.add("invisible");
+    imageToVariable();
 
     try {
       const res = await fetch(
@@ -36,7 +33,6 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
         }
       );
       const blob = await res.blob();
-      /* eslint-disable */
       setImage(URL.createObjectURL(blob));
 
       setIsLoading(false);
@@ -48,17 +44,26 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const onSubmitAnimation = () => {
     setIsLoading(true);
 
-    /* eslint-disable */
-    const promptContainer: JSX.IntrinsicElements["div"] =
+    const promptContainer: HTMLDivElement | null =
       document.querySelector(".prompt-container");
-    /* eslint-disable */
-    promptContainer.classList.add("prompt-container_animation");
+
+    if (promptContainer !== null) {
+      promptContainer.classList.add("prompt-container_animation");
+    }
 
     const titleElement = document.querySelector(props.title);
     if (titleElement) {
       titleElement.classList.add("title-animation");
     }
   };
+
+  function imageToVariable() {
+    const aiImageElement = document.querySelector(props.aiImage);
+
+    if (aiImageElement !== null) {
+      aiImageElement.classList.add("invisible");
+    }
+  }
 
   return (
     <div className="section flex flex-col w-full place-items-center">
@@ -74,7 +79,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
           />
         </form>
 
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit">
           <Image
             src="/search-btn.png"
             alt="search"
