@@ -79,7 +79,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
           />
         </form>
 
-        <button type="submit">
+        <button type="submit" onClick={handleSubmit}>
           <Image
             src="/search-btn.png"
             alt="search"
