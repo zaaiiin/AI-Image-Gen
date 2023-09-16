@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { SyntheticEvent, useState } from "react";
 import apiKey from "../../components/apiKey";
 import { Skeleton } from "../../components/ui/skeleton";
-import { FormEvent } from "react";
+import { SyntheticEvent } from "react";
 
 interface ImageGeneratorProps {
   title: string;
@@ -15,7 +15,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [image, setImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
     onSubmitAnimation();
     imageToVariable();
