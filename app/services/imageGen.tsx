@@ -71,7 +71,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   }
 
   function disableKeyboard() {
-    if (window.visualViewport !== null) {
+    if (window.visualViewport) {
       window.visualViewport.addEventListener("resize", (event) => scrollToTop);
     }
   }
