@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { SyntheticEvent, useState } from "react";
+import React, { SyntheticEvent, useEffect, useRef, useState } from "react";
 import apiKey from "../../components/apiKey";
 import { Skeleton } from "../../components/ui/skeleton";
 
@@ -13,7 +13,14 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  addFocus();
+  // addFocus();
+  const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
+
+  useEffect(() => {
+    if (textAreaRef.current) {
+      textAreaRef.current.focus();
+    }
+  }, []);
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -77,12 +84,12 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
     }
   }
 
-  function addFocus() {
-    const promptContainer = document.getElementById(".text-area");
-    if (promptContainer) {
-      promptContainer.focus();
-    }
-  }
+  // function addFocus() {
+  //   const promptContainer = document.getElementById(".text-area");
+  //   if (promptContainer) {
+  //     promptContainer.focus();
+  //   }
+  // }
 
   return (
     <div className="section flex flex-col w-full place-items-center">
@@ -95,6 +102,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter a prompt"
             id="text-area"
+            ref={textAreaRef}
           />
         </form>
 
