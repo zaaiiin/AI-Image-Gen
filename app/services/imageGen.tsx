@@ -18,6 +18,8 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   useEffect(() => {
     const textArea = document.getElementById("text-area");
     if (textArea) {
+      console.log("Page component mounted");
+
       textArea.focus();
     }
   }, []);
