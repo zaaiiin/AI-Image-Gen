@@ -13,6 +13,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  addFocus();
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -73,6 +74,13 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   function disableKeyboard() {
     if (window.visualViewport) {
       window.visualViewport.addEventListener("resize", (event) => scrollToTop);
+    }
+  }
+
+  function addFocus() {
+    const promptContainer = document.getElementById(".text-area");
+    if (promptContainer) {
+      promptContainer.focus();
     }
   }
 
