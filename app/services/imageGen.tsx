@@ -13,14 +13,21 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const [input, setInput] = useState("");
   const [image, setImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  // addFocus();
 
   useEffect(() => {
     const textArea = document.getElementById("text-area");
     if (textArea) {
-      console.log("Page component mounted");
+      // Check if the page is in a mobile view
+      const isMobileView = window.innerWidth <= 768; // Adjust the threshold as needed
 
-      textArea.focus();
+      // Use a delay to focus on mobile devices
+      if (isMobileView) {
+        setTimeout(() => {
+          textArea.focus();
+        }, 100); // Adjust the delay as needed
+      } else {
+        textArea.focus();
+      }
     }
   }, []);
 
