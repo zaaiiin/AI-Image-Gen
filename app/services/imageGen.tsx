@@ -17,17 +17,9 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   useEffect(() => {
     const textArea = document.getElementById("text-area");
     if (textArea) {
-      // Check if the page is in a mobile view
-      const isMobileView = window.innerWidth <= 768; // Adjust the threshold as needed
+      console.log("Page component mounted");
 
-      // Use a delay to focus on mobile devices
-      if (isMobileView) {
-        setTimeout(() => {
-          textArea.focus();
-        }, 100); // Adjust the delay as needed
-      } else {
-        textArea.focus();
-      }
+      textArea.focus();
     }
   }, []);
 
