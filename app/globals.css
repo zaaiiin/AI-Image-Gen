@@ -46,7 +46,7 @@
   transform: translateY(-50%) scaleY(1.5);
   transition: font-size 1s ease-in-out, transform 0.5s ease-in-out;
   line-height: 1.1em;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.25rem;
 }
 
 .prompt-container_animation {
