@@ -5,7 +5,7 @@ import ImageGenerator from "./services/imageGen";
 
 function Page() {
   return (
-    <main className=" bg-black min-h-screen flex flex-col">
+    <main className=" bg-black h-screen flex flex-col">
       <Header />
 
       <div className="hero text-2xl md:text-4xl lg:text-6xl xl:text-7xl text-white w-full flex justify-center uppercase tracking-widest font-archivo-narrow font-bold leading-6">
