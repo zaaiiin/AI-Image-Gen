@@ -20,7 +20,7 @@ const Header = () => {
       </nav>
 
       <button
-        className="menu absolute right-10 pt-2 z-120 md:invisible"
+        className="menu absolute right-10 pt-2 z-120 md:invisible mt-5"
         onClick={() => setToggle(!toggle)}
       >
         <Image
@@ -33,7 +33,7 @@ const Header = () => {
       </button>
 
       {toggle && (
-        <ul className="menu-group text-black flex flex-col absolute top-0 left-0 b-0 mt-0 mb-0 bg-white h-screen w-screen text-sm items-left rounded-sm font-700 px-3 z-100">
+        <ul className="menu-group text-black flex flex-col absolute top-0 left-0 b-0  mb-0 bg-white h-screen w-screen text-sm items-left rounded-sm font-700 px-3 z-100">
           <li className="menu-group_item pt-6">How it works</li>
           <li className="menu-group_item border-t">About us</li>
           <li className="menu-group_item border-t">Terms of service</li>

@@ -87,7 +87,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   }
 
   return (
-    <div className="section flex flex-col w-full place-items-center">
+    <div className="section flex flex-col w-full place-items-center ">
       <div className="prompt-container flex mt-14 items-center justify-center w-max z-100">
         <form onSubmit={handleSubmit}>
           <input
