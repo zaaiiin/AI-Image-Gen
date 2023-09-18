@@ -13,7 +13,7 @@ const Header = () => {
           PixaNova
         </div>
       </Link>
-      <nav className="navGroup invisible md:visible text-white text-sm items-center absolute px-0 h-10 right-1/4 left-1/4 flex text-center justify-center gap-5">
+      <nav className="navGroup invisible md:visible text-white text-sm items-center absolute px-0 h-10 mt-5 right-1/4 left-1/4 flex text-center justify-center gap-5">
         <div className="how ">How it Works</div>
         <div className="about">About Us</div>
         <div className="terms">Terms of Use</div>
@@ -41,7 +41,7 @@ const Header = () => {
         </ul>
       )}
 
-      <button className="sign-in absolute invisible md:visible right-10 text-sm text-white min-w-[10px]">
+      <button className="sign-in absolute invisible md:visible right-10  mt-5  text-sm text-white min-w-[10px]">
         Sign In
       </button>
     </header>
