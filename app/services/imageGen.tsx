@@ -43,6 +43,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   const onSubmitAnimation = () => {
     setIsLoading(true);
     scrollToTop();
+    disableKeyboard();
 
     const promptContainer: HTMLDivElement | null =
       document.querySelector(".prompt-container");
@@ -67,6 +68,10 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
 
   function scrollToTop() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }
+
+  function disableKeyboard() {
+    window.visualViewport.addEventListener("resize", (event) => scrollToTop);
   }
 
   return (
