@@ -91,7 +91,6 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
         <form onSubmit={handleSubmit}>
           <input
             className="form w-52"
-            type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter a prompt"
