@@ -14,7 +14,7 @@ function Page() {
           Stunning Visuals
         </p>
       </div>
-      <div className="ai-container flex flex-col w-300 xl:w-400 justify-center z-20 items-center mx-auto my-88 md:my-110 lg:my-160 xl:my-190">
+      <div className="ai-container flex flex-col w-300 xl:w-400 justify-center z-20 items-center mx-auto my-88 md:my-110 lg:my-160 xl:my-220">
         <Image
           src="/ai-image.png"
           alt="AI"
