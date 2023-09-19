@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { SyntheticEvent, useEffect, useState } from "react";
-// import apiKey from "../../components/apiKey";
+import apiKey from "../../components/apiKey";
 import { Skeleton } from "../../components/ui/skeleton";
 
 interface ImageGeneratorProps {
@@ -17,8 +17,6 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
   useEffect(() => {
     const textArea = document.getElementById("text-area");
     if (textArea) {
-      console.log("Page component mounted");
-
       textArea.focus();
     }
   }, []);
@@ -35,7 +33,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
           method: "POST",
           headers: {
             "content-type": "application/json",
-            Authorization: `Bearer ${process.env.API_KEY}`,
+            Authorization: `Bearer ${apiKey}`,
           },
           body: JSON.stringify({ inputs: input }),
         }
