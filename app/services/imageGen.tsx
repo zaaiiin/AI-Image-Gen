@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { SyntheticEvent, useEffect, useState } from "react";
-import apiKey from "../../components/apiKey";
+// import apiKey from "../../components/apiKey";
 import { Skeleton } from "../../components/ui/skeleton";
 
 interface ImageGeneratorProps {
