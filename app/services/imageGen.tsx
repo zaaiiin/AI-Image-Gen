@@ -35,7 +35,7 @@ const ImageGenerator: React.FC<ImageGeneratorProps> = (props) => {
           method: "POST",
           headers: {
             "content-type": "application/json",
-            Authorization: `Bearer ${apiKey}`,
+            Authorization: `Bearer ${process.env.API_KEY}`,
           },
           body: JSON.stringify({ inputs: input }),
         }
