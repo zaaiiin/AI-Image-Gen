@@ -36,7 +36,8 @@ module.exports = {
       margin: {
         88: "88px",
         110: "110px",
-        160: "160px",
+        150: "150px",
+        204: "204px",
         220: "220px",
       },
       sizing: {
